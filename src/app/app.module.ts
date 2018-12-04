@@ -14,6 +14,7 @@ import { BldgtransportService } from './bldgtransport.service';
 import { LoginComponent } from './login/login.component';
 import {LogonService} from './logon.service';
 import { NewUserComponent } from './new-user/new-user.component';
+import {DyndbService} from './dyndb.service'
 
 const appRoutes: Routes = [
 
@@ -50,7 +51,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],
-  providers: [LocalDBService, BldgtransportService, LogonService],
+  providers: [LocalDBService, BldgtransportService, LogonService, DyndbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
