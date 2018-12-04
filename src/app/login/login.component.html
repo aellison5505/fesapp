@@ -1,0 +1,14 @@
+<div class="w3-row w3-container w3-content">
+  <h2 class="w3-xxxlarge">LogOn</h2>
+  <form class="w3-panel w3-white w3-card-2 w3-display-container">
+    <span class="w3-right-align"> <a  routerLink="/newuser" >Create New User</a></span>
+    <p class="w3-xlarge w3-margin-left">Enter your user name:<br />
+      <input [(ngModel)]="user" name="user" style="width: 150px;" type="text" required autofocus></p>
+    <p class="w3-xlarge w3-margin-left">Enter your user password:<br />
+      <input [(ngModel)]="passwd" name="passwd" style="width: 150px;" type="password" required autofocus><br />
+      <span *ngIf="getErrVis" class="w3-text-red w3-xlarge">{{err}}</span><br />
+      <button class="w3-btn w3-theme-d5" (click)="submit()">Submit</button><br />
+    </p>
+  </form>
+
+</div>

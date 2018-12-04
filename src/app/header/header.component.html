@@ -1,0 +1,12 @@
+<nav id="SNav" *ngIf="vis" class="w3-sidenav w3-black w3-container w3-content">
+    <div class="w3-panel w3-bar-block w3-white w3-card-4 w3-large">
+       <a href="#" id="navX" (click)="hide()" class="w3-closenav w3-xlarge w3-right-align">&times;</a>
+        <a (click)="hide()" routerLink="/welcome" routerLinkActive="w3-green">Home</a>
+        <a (click)="hide()" routerLink="/lookup" routerLinkActive="w3-green">Lookup Building</a>
+    </div>
+</nav>
+
+<header class="w3-container w3-xlarge w3-text-shadow w3-text-white w3-theme-d5">
+  <span *ngIf="logon.getLoged" id="menu" (click)="show()" class="w3-opennav">&#9776;</span>
+  <span class="w3-right-align"> <a  routerLink="/welcome" >JDMDL FES APP</a></span>
+</header>

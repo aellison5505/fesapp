@@ -1,0 +1,14 @@
+<div class="w3-row w3-container w3-content">
+  <h2 class="w3-xxxlarge">Create User</h2>
+  <form class="w3-panel w3-white w3-card-2 w3-display-container">
+    <p class="w3-xlarge w3-margin-left">Enter a user name (E-Mail):<br />
+      <input [(ngModel)]="user" name="user" (keyup)="onKeyUp()" style="width: 200px;" type="text" required autofocus><br /> <span *ngIf="getEmailCk" class="w3-text-red w3-xlarge">Enter a email.<br /></span>Enter a password:<br />
+      <input [(ngModel)]="passwd" name="passwd" (keyup)="onKeyUp()" style="width: 150px;" type="password" required autofocus><br />
+      <span *ngIf="getPassWk" class="w3-text-red w3-xlarge">Password too weak.<br /></span> Enter password again:<br />
+      <input [(ngModel)]="passwd1" name="passwd1"  (keyup)="onKeyUp()" style="width: 150px;" type="password" required autofocus><br />
+      <span *ngIf="getPassNot" class="w3-text-red w3-xlarge">Password doesn't match.<br /></span><br />
+      <button class="w3-btn w3-theme-d5" (click)="submit()">Submit</button><br />
+    </p>
+  </form>
+
+</div>
